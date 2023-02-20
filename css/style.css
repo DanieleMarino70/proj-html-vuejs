@@ -10,13 +10,18 @@
 
 /* RESET */
 ul,ol{
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 /* GENERAL */
+header{
+    background-color: var(--primary-color);
+}
 
 body{
-    background-color: var(--primary-color);
+    background-image: url("../assets/body-bg.jpg");
 }
 
 /* UTILITIES */
@@ -25,4 +30,12 @@ body{
     color: var(--grey-color);
 }
 
+.text-tertiary{
+    color: var(--tertiary-color);
+}
+
 /* CUSTOM CSS */
+
+.header-bottom ul > li{
+    padding: 0 20px;
+}
