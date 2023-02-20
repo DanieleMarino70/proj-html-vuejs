@@ -38,8 +38,31 @@ body{
     color: var(--tertiary-color);
 }
 
+.max-content{
+    width: max-content;
+}
+
+.secondary-badge{
+    position: relative;
+    background-color: var(--secondary-color);
+    clip-path: polygon(99.72% 0.97%, 50.62% -4.78%, 1.97% -8.10%, 0.27% 101.18%, 98.09% 99.13%);
+    text-align: center;
+}
+
 /* CUSTOM CSS */
 
 .header-bottom ul > li{
     padding: 0 20px;
+}
+
+.jumbotron{
+    height: 90vh;
+    background-image: url("../assets/debug.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.jumbotron .container,
+.jumbotron .row{
+    height: inherit;
 }
