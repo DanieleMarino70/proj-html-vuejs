@@ -4,5 +4,25 @@
     --primary-color: #1D1427;
     --secondary-color: #F9AA01;
     --tertiary-color: #FFFFFF;
+    --grey-color: #787374;
     /* ------- */
 }
+
+/* RESET */
+ul,ol{
+    padding: 0;
+}
+
+/* GENERAL */
+
+body{
+    background-color: var(--primary-color);
+}
+
+/* UTILITIES */
+
+.grey{
+    color: var(--grey-color);
+}
+
+/* CUSTOM CSS */
