@@ -60,6 +60,7 @@ body{
     height: 90vh;
     background-image: url("../assets/debug.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -73,7 +74,6 @@ body{
 .cms-title{
     width: 50%;
     top: 25%;
-    right: 0;
-    transform: translate(-25%);
+    right: 10px;
 }
 
