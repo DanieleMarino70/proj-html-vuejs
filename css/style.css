@@ -1,3 +1,4 @@
+
 /* ROOT */
 :root{
     /* colors */
@@ -7,6 +8,7 @@
     --grey-color: #787374;
     /* ------- */
 }
+
 
 /* RESET */
 ul,ol{
@@ -21,6 +23,8 @@ header{
 }
 
 body{
+    font-family: 'Oxanium';
+    font-weight: bold;
     background-image: url("../assets/body-bg.jpg");
 }
 
