@@ -110,8 +110,24 @@ a{
     transform: translateY(-50%);
 }
 
+.circle-img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    overflow: hidden;
+}
 
+.dot-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--tertiary-color);
+}
 
+.dot-circle.active{
+    background-color: var(--secondary-color);
+}
 
 /* ** CUSTOM CSS ** */
 
@@ -132,12 +148,29 @@ a{
     height: inherit;
 }
 
-#our-products .row.products  .category-image:hover img:nth-child(1){
+#our-products .row.products  .category-image:hover img:nth-child(1),
+#deals .row.deals .category-image:hover img:nth-child(1){
     display: block !important;
 }
 
-#our-products .row.products .category-image:hover img:nth-child(2) {
+#our-products .row.products .category-image:hover img:nth-child(2),
+#deals .row.deals .category-image:hover img:nth-child(2) {
     display: none !important;
 }
 
+.quotes{
+    height: 40vh;
+    background-image: url("../assets/parallax.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+
+.quotation-mark{
+    top: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
