@@ -3,6 +3,7 @@
 :root{
     /* colors */
     --primary-color: #1D1427;
+    --primary-rgb: 29, 20, 39;
     --secondary-color: #F9AA01;
     --tertiary-color: #FFFFFF;
     --grey-color: #787374;
@@ -17,6 +18,7 @@ ul,ol{
     padding: 0;
 }
 
+
 /* GENERAL */
 header{
     background-color: var(--primary-color);
@@ -28,10 +30,18 @@ body{
     background-image: url("../assets/body-bg.jpg");
 }
 
-/* UTILITIES */
+a{
+    color: unset !important;
+}
+
+/* UTILITIES CUSTOM */
 
 .grey{
     color: var(--grey-color);
+}
+
+.text-secondary{
+    color: var(--secondary-color) !important;
 }
 
 .text-tertiary{
@@ -42,6 +52,11 @@ body{
     width: max-content;
 }
 
+.cms-title {
+    width: 50%;
+    top: 25%;
+    right: 10px;
+}
 
 .secondary-badge{
     position: relative;
@@ -50,7 +65,55 @@ body{
     text-align: center;
 }
 
-/* CUSTOM CSS */
+.secondary-badge.top-card{
+    position: absolute;
+    clip-path: polygon(99.72% 0.97%, 50.62% -4.78%, 17.2% -12.27%, 0.27% 101.18%, 79.81% 107.46%);    
+    top:8px;
+    left:8px;
+}
+
+.line{
+    width: 5%;
+    border: 1px solid var(--secondary-color);
+}
+
+.cover-bottom{
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    background-color: rgba(var(--primary-rgb), 0.5);
+}
+.cover-bottom:hover{
+    background-color: rgba(var(--primary-rgb), 1);
+}
+
+.cover-bottom.products {
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.section-options > *{
+    text-align: center;
+    padding: 10px;
+    min-width: 160px;
+}
+
+.left-arrow{
+    bottom:50%;
+    left:0;
+    transform: translateY(-50%);
+}
+
+.right-arrow {
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+
+
+
+/* ** CUSTOM CSS ** */
 
 .header-bottom ul > li{
     padding: 0 20px;
@@ -69,11 +132,12 @@ body{
     height: inherit;
 }
 
-
-
-.cms-title{
-    width: 50%;
-    top: 25%;
-    right: 10px;
+#our-products .row.products  .category-image:hover img:nth-child(1){
+    display: block !important;
 }
+
+#our-products .row.products .category-image:hover img:nth-child(2) {
+    display: none !important;
+}
+
 
