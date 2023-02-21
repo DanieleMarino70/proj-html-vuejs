@@ -118,6 +118,13 @@ a{
     overflow: hidden;
 }
 
+.tertiary-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--tertiary-color);
+}
+
 .dot-circle{
     width: 10px;
     height: 10px;
@@ -128,6 +135,7 @@ a{
 .dot-circle.active{
     background-color: var(--secondary-color);
 }
+
 
 /* ** CUSTOM CSS ** */
 
@@ -173,4 +181,31 @@ a{
     height: 25px;
     border-radius: 50%;
     background-color: var(--secondary-color);
+}
+
+.overlay:hover .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.overlay-options{
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay:hover .overlay-options{
+    display: flex;
+
+    cursor: pointer;
+}
+
+.blog-brands > *{
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
 }
