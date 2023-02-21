@@ -36,6 +36,10 @@ a{
 
 /* UTILITIES CUSTOM */
 
+.csp{
+    cursor: pointer;
+}
+
 .grey{
     color: var(--grey-color);
 }
@@ -83,11 +87,11 @@ a{
     bottom: 0;
     background-color: rgba(var(--primary-rgb), 0.5);
 }
-.cover-bottom:hover{
-    background-color: rgba(var(--primary-rgb), 1);
-}
+
 
 .cover-bottom.products {
+    justify-content: space-between;
+    min-height: 100px;
     padding: 0;
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -139,11 +143,26 @@ a{
 
 /* ** CUSTOM CSS ** */
 
+/* HEADER */
+
+
 .header-bottom ul > li{
     padding: 0 20px;
 }
 
-.jumbotron{
+li:hover,
+li:hover > p,
+.bottom-jumbotron .row.service-icons:hover  h6,
+#our-products .section-options > div:hover{
+    color: var(--secondary-color);
+}
+
+
+
+/* --------------- */
+
+/* MAIN */
+.jumbotron {
     height: 90vh;
     background-image: url("../assets/debug.jpg");
     background-size: cover;
@@ -156,18 +175,27 @@ a{
     height: inherit;
 }
 
+.btn.shop-now:hover{
+    background-color: var(--secondary-color);
+}
+
+#special-category .category-image:hover .cover-bottom {
+    background-color: rgba(var(--primary-rgb), 1);
+}
+
 #our-products .row.products  .category-image:hover img:nth-child(1),
-#deals .row.deals .category-image:hover img:nth-child(1){
+#deals .row.deals .category-image:hover img:nth-child(1),
+#jumbo .row.service-icons:hover .col-auto> img:nth-child(1){
     display: block !important;
 }
 
 #our-products .row.products .category-image:hover img:nth-child(2),
-#deals .row.deals .category-image:hover img:nth-child(2) {
+#deals .row.deals .category-image:hover img:nth-child(2),
+#jumbo .row.service-icons:hover .col-auto > img:nth-child(2) {
     display: none !important;
 }
 
 .quotes{
-    height: 50vh;
     background-image: url("../assets/parallax.jpg");
     background-size: cover;
     background-position: center;
@@ -208,4 +236,15 @@ a{
     display: flex;
     justify-content: center;
     padding: 40px 20px;
+}
+
+/* ------------------------------ */
+
+
+/* FOOTER */
+.footer-jumbotron {
+    background-image: url("../assets/footer-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
