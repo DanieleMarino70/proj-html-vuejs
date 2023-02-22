@@ -35,11 +35,12 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script> -->
 
     <!-- MAIN JS -->
+    <script type="text/javascript" src="./js/data.js" defer></script>
     <script type="text/javascript" src="./js/main.js" defer></script>
 </head>
 <body>
-
-    <header>       
+    <div id="root">
+        <header>       
         <div class="header-top border-0 border-light border-bottom border-opacity-10">
             <div class="container d-flex justify-content-between align-items-center grey">
                 <div class="support-list-left p-2">
@@ -61,19 +62,12 @@
                 <!-- RIFARE IN VUEJS -->
                 <nav class="header-links">
                     <ul class="head-menu d-flex text-tertiary">
-                        <li class="position-relative" v-for="link in h-links">
-                            <a href="" class="text-decoration-none">{{link.name}}Home</a>
+                        <li class="position-relative" v-for="link in headerLinks">
+                            <a href="" class="text-decoration-none">{{link.title}}</a>
                             <ul class="menu">
-                                <li><a href="" class="text-decoration-none">Left Sidebar</a></li>
-                                <li><a href="">Right Sidebar</a></li>
-                                <li><a href="">Full Width</a></li>
+                                <li v-for="objMenu in link.menuLists"><a :href="objMenu.url" class="text-decoration-none">{{objMenu.subtitle}}</a></li>
                             </ul>
                         </li>
-                        <li class="position-relative"><a href="" class="text-decoration-none">Shop</a></li>
-                        <li class="position-relative"><a href="" class="text-decoration-none">Blog</a></li>
-                        <li class="position-relative"><a href="" class="text-decoration-none">Media</a></li>
-                        <li class="position-relative"><a href="" class="text-decoration-none">ShortCode</a></li>
-                        <li class="position-relative"><a href="" class="text-decoration-none">Features</a></li>
                     </ul>
                 </nav>
     
@@ -91,10 +85,9 @@
                 </div>
             </div>
         </div>
-    </header>
-
-
-    <main>
+        </header>
+    
+        <main>
         
         <!-- #jumbo -->
         <section id="jumbo">
@@ -649,7 +642,7 @@
                 </div>
         
                 <div class="row position-relative">
-
+    
                     <!-- 1  COLONNA BLOG -->
                     <div class="col-4">
                         <div class="blog">
@@ -680,7 +673,7 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <!-- 2 COLONNA BLOG -->
                     <div class="col-4">
                         <div class="blog">
@@ -713,7 +706,7 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <!-- 3 COLONNA BLOG -->
                     <div class="col-4">
                         <div class="blog">
@@ -746,7 +739,7 @@
                             </div>
                         </div>
                     </div>
-
+    
                     <!-- CONTROLLI DELLA ROW BLOGS -->
                     <div class="controls-row">
                         <div class="left-arrow position-absolute">
@@ -777,10 +770,9 @@
                 </div>
             </div>
         </section>
-    </main>
+        </main>
 
-
-    <footer>
+        <footer>
         <div class="footer-jumbotron">
             <div class="footer-top border-bottom border-light border-opacity-25">
                 <div class="container pt-5 pb-5">
@@ -803,7 +795,7 @@
                                 </li>
                             </ul>
                         </div>
-
+    
                         <div class="col">
                             <h5 class="text-tertiary mb-3">Information</h5>
                             <ul class="grey">
@@ -884,7 +876,7 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 </html>
