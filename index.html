@@ -53,24 +53,29 @@
             </div>
         </div>
         <div class="header-bottom">
-            <div class="container d-flex justify-content-between align-items-center p-4">
+            <div class="container d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <img src="./assets/logo.png" alt="">
                 </div>
     
                 <!-- RIFARE IN VUEJS -->
-                <div class="links">
-                    <nav>
-                        <ul class="d-flex text-tertiary">
-                            <li><a href="" class="text-decoration-none">Home</a></li>
-                            <li><a href="" class="text-decoration-none">Shop</a></li>
-                            <li><a href="" class="text-decoration-none">Blog</a></li>
-                            <li><a href="" class="text-decoration-none">Media</a></li>
-                            <li><a href="" class="text-decoration-none">ShortCode</a></li>
-                            <li><a href="" class="text-decoration-none">Features</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav class="header-links">
+                    <ul class="d-flex text-tertiary">
+                        <li class="position-relative" v-for="link in h-links">
+                            <a href="" class="text-decoration-none">{{link.name}}Home</a>
+                            <ul class="menu">
+                                <li><a href="">Left Sidebar</a></li>
+                                <li><a href="">Right Sidebar</a></li>
+                                <li><a href="">Full Width</a></li>
+                            </ul>
+                        </li>
+                        <li class="position-relative"><a href="" class="text-decoration-none">Shop</a></li>
+                        <li class="position-relative"><a href="" class="text-decoration-none">Blog</a></li>
+                        <li class="position-relative"><a href="" class="text-decoration-none">Media</a></li>
+                        <li class="position-relative"><a href="" class="text-decoration-none">ShortCode</a></li>
+                        <li class="position-relative"><a href="" class="text-decoration-none">Features</a></li>
+                    </ul>
+                </nav>
     
                 <div class="logged-user-info">
                     <ul class="d-flex text-tertiary">
