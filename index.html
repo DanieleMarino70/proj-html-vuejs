@@ -777,68 +777,41 @@
             <div class="footer-top border-bottom border-light border-opacity-25">
                 <div class="container pt-5 pb-5">
                     <div class="row row-cols-2 row-cols-md-4">
-                        <!-- Address Info -->
+                        <!-- ADDRESS INFO -->
                         <div class="col">
-                            <h5 class="text-tertiary mb-3">Address Info</h5>
+                            <h5 class="text-tertiary mb-3">{{addressInfo[0].title}}</h5>
                             <ul class="grey">
-                                <li class="d-flex">
-                                    <a href="#" class="pe-2"><i class="fa-solid fa-location-dot text-secondary"></i></a>
-                                    <a href="#" class="text-decoration-none">60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America</a>
-                                </li>
-                                <li class="d-flex">
-                                    <a href="#" class="pe-2"><i class="fa-solid fa-phone text-secondary"></i></a>
-                                    <a href="#" class="text-decoration-none">(+00) 123-456-789</a>
-                                </li>
-                                <li class="d-flex">
-                                    <a href="#" class="pe-2"><i class="fa-solid fa-envelope text-secondary"></i></a>
-                                    <a href="#" class="text-decoration-none">demo@example.com</a>
+                                <li v-for="link in addressInfo.slice(1)" class="d-flex pt-1 pb-1">
+                                    <a :href="link.url" class="pe-2"><i :class="'fa-solid ' + link.icon + ' text-secondary'"></i></a>
+                                    <a :href="link.url" class="text-decoration-none">{{link.text}}</a>
                                 </li>
                             </ul>
                         </div>
-    
+                        
+                        <!-- INFORMATION -->
                         <div class="col">
-                            <h5 class="text-tertiary mb-3">Information</h5>
+                            <h5 class="text-tertiary mb-3">{{information[0].title}}</h5>
                             <ul class="grey">
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Bookmark</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Features</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Sitemap</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Lists</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Contact Us</a>
+                                <li v-for="link in information.slice(1)" class="mb-2">
+                                    <a :href="link.url" class="text-reset text-decoration-none pe-2">{{link.text}}</a>
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- EXTRAS -->
                         <div class="col">
-                            <h5 class="text-tertiary mb-3">Extras</h5>
+                            <h5 class="text-tertiary mb-3">{{extras[0].title}}</h5>
                             <ul class="grey">
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Delivery</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Cart</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">Terms conditions</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">My account</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="text-reset text-decoration-none pe-2">About Us</a>
+                                <li v-for="link in extras.slice(1)" class="mb-2">
+                                    <a :href="link.url" class="text-reset text-decoration-none pe-2">{{link.text}}</a>
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- NEWSLETTER -->
                         <div class="col">
-                            <h5 class="text-tertiary mb-3">Our Newsletter</h5>
-                            <p class="grey">There are many variations of passages of form humour or randomised</p>
+                            <h5 class="text-tertiary mb-3">{{newsletter[0].title}}</h5>
+                            <p class="grey">{{newsletter[0].text}}</p>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" 
                                     aria-describedby="button-addon2">
@@ -847,11 +820,11 @@
                                 </button>
                             </div>
                             <ul class="d-flex text-tertiary">
-                                <li><a href="#" class="text-reset text-decoration-none pe-3"><small><i class="fa-brands fa-facebook-f"></i></small></a></li>
-                                <li><a href="#" class="text-reset text-decoration-none pe-3"><small><i class="fa-brands fa-twitter"></i></small></a></li>
-                                <li><a href="#" class="text-reset text-decoration-none pe-3"><small><i class="fa-brands fa-google-plus-g"></i></small></a></li>
-                                <li><a href="#" class="text-reset text-decoration-none pe-3"><small><i class="fa-brands fa-skype"></i></small></a></li>
-                                <li><a href="#" class="text-reset text-decoration-none pe-3"><small><i class="fa-brands fa-instagram"></i></small></a></li>
+                                <li v-for="link in newsletter.slice(1)">
+                                    <a :href="link.url" class="text-reset text-decoration-none pe-3">
+                                        <small><i :class="'fa-brands ' + link.icon"></i></small>
+                                    </a>
+                                </li>
                             </ul>
                         </div>                        
                     </div>
